@@ -61,7 +61,11 @@ Kaynakça
 •	Kotlin Resmi Dokümantasyonu https://kotlinlang.org/docs/home.html
 •	Android Developers: Uygulama Geliştirme https://developer.android.com/
 
+________________________________________
+UYGULAMA AKIŞ ŞEMASI VE GÖRSELLER
 
+________________________________________
+![PalletMart Akış Diyagramı](https://github.com/user-attachments/assets/309671ac-0ad1-4b12-8eb2-769cefffaa37)
 ![Login](https://github.com/user-attachments/assets/bb90573b-5a68-4081-a0cc-010c32bf0459)
 ![Register](https://github.com/user-attachments/assets/2e389d7d-efb3-4e35-bcc8-d2d7d8abb2c2)
 ![Admin Ana Ekran](https://github.com/user-attachments/assets/17cd71b5-35ff-404c-a16e-b347356fd4fb)
