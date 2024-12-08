@@ -19,10 +19,15 @@ Teknolojik Altyapı:
 PalletMart, Kotlin programlama dili kullanılarak geliştirilmiş, verilerin güvenli ve hızlı bir şekilde saklanmasını sağlamak için Firebase Realtime Database teknolojisinden faydalanılmıştır.
 Veri Yapısı:
 Veritabanında kullanılan düğümler:
+
 •	Users Düğümü: Kullanıcı bilgilerini saklar.
+
 •	Products Düğümü: Satışa sunulan ürünlerin detaylarını içerir.
+
 •	Orders Düğümü: Sipariş bilgilerini yönetir.
+
 •	Cart Düğümü: Kullanıcıların sepet işlemlerini takip eder.
+
 
 Uygulama Akışı:
 
