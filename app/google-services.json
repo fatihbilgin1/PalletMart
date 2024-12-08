@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892525694409",
+    "project_id": "palletmart-d248d",
+    "storage_bucket": "palletmart-d248d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892525694409:android:d3f70d65b73c2f5f64ac18",
+        "android_client_info": {
+          "package_name": "com.fatihbilgin.palletmart"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBEcKQRrIfTNozWJ0J0b_JhKenrajch0k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temsili Ödeme</title>
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #card-element {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #error-message {
+            color: #ff0000;
+            margin-top: 10px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Ödeme Yap</h2>
+
+        <!-- Ödeme Formu -->
+        <form id="payment-form">
+            <div id="card-element">
+                <!-- Stripe Elements kart bilgisi alanı burada olacak -->
+            </div>
+            <button id="payButton" type="submit">Ödeme Yap</button>
+            <div id="error-message"></div> <!-- Hata mesajı alanı -->
+        </form>
+
+        <div class="footer">
+            <p>&copy; 2024 Ödeme Sistemi. Tüm hakları saklıdır.</p>
+        </div>
+    </div>
+
+    <script>
+        // Stripe'a bağlan
+        const stripe = Stripe('pk_test_51QSkxiRwakwQxGFiMQ2KUYheB2pG0FocdBu1E6fnbOpywgdF9NcBHSjRHiptwjruSA5SEcIMVxHkx51Nyzt0YTcx00Ph71nko2'); // Yayınlanabilir anahtar
+        const elements = stripe.elements();
+        const cardElement = elements.create('card'); // Kart alanını oluştur
+        cardElement.mount('#card-element'); // Kart alanını formda göstermek için
+
+        // Ödeme butonunu ve formu al
+        const payButton = document.getElementById('payButton');
+        const form = document.getElementById('payment-form');
+        const errorMessage = document.getElementById('error-message');
+
+        // Form gönderildiğinde işlemi başlat
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault(); // Sayfa yenilenmesini engelle
+
+            // Backend'e ödeme isteği gönder
+            const response = await fetch('http://10.0.2.2:3000/create-payment-intent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: 5000,  // 50.00 USD
+                    currency: 'usd'  // Para birimi
+                })
+            });
+
+            if (!response.ok) {
+                errorMessage.textContent = 'Backend ile bağlantı hatası!';
+                return;
+            }
+
+            const { clientSecret } = await response.json(); // clientSecret'ı al
+
+            // Stripe.js ile ödeme işlemini başlat
+            const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: cardElement,  // Kart bilgisi
+                },
+            });
+
+            // Hata varsa göster
+            if (error) {
+                console.log(error);
+                errorMessage.textContent = error.message;
+            } else if (paymentIntent.status === 'succeeded') {
+                alert('Ödeme başarıyla tamamlandı!'); // Başarılı ödeme mesajı
+                window.location.href = '/cart';
+            }
+        });
+    </script>
+</body>
+
+</html>

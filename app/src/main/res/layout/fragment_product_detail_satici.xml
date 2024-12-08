@@ -1,0 +1,116 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="1dp"
+    android:background="@drawable/background"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    tools:context="com.fatihbilgin.palletmart.saticipanel.ProductDetailSatici">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        android:padding="16dp">
+
+        <!-- Scrollable content -->
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/productFormCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:orientation="vertical">
+
+                    <!-- Ürün fotoğrafı -->
+                    <ImageView
+                        android:id="@+id/productImageUrl"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="24dp"
+                        android:background="@drawable/ic_launcher_background"
+                        android:contentDescription="Ürün Fotoğrafı"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <!-- Ürün adı edittext -->
+                    <EditText
+                        android:id="@+id/productNameEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Ürün Adı"
+                        android:padding="12dp" />
+
+                    <!-- Ürün açıklaması edittext -->
+                    <EditText
+                        android:id="@+id/productDescriptionEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Ürün Açıklaması"
+                        android:padding="12dp" />
+
+                    <!-- Ürün fiyatı edittext -->
+                    <EditText
+                        android:id="@+id/productPriceEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:hint="Ürün Fiyatı"
+                        android:inputType="numberDecimal"
+                        android:padding="12dp" />
+
+                    <!-- Ürün stok miktarı edittext -->
+                    <EditText
+                        android:id="@+id/productStockEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:hint="Stok Adeti"
+                        android:padding="12dp" />
+
+                    <!-- Güncelle butonu -->
+                    <Button
+                        android:id="@+id/updateProductButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:backgroundTint="@color/altın_sarısı"
+                        android:text="Güncelle"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <!-- Sil butonu -->
+                    <Button
+                        android:id="@+id/deleteProductButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="#A82323"
+                        android:text="Sil"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

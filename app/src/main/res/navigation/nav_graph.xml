@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.fatihbilgin.palletmart.girispanel.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_adminAnaEkran"
+            app:destination="@id/adminAnaEkran" />
+        <action
+            android:id="@+id/action_loginFragment_to_kullaniciEkran"
+            app:destination="@id/kullaniciEkran" />
+        <action
+            android:id="@+id/action_loginFragment_to_saticiAnaEkran"
+            app:destination="@id/saticiAnaEkran" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.fatihbilgin.palletmart.girispanel.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminAnaEkran"
+        android:name="com.fatihbilgin.palletmart.adminpanel.AdminAnaEkran"
+        android:label="fragment_admin_ana_ekran"
+        tools:layout="@layout/fragment_admin_ana_ekran" >
+        <action
+            android:id="@+id/action_adminAnaEkran_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_adminAnaEkran_to_productManagement"
+            app:destination="@id/ProductManagement" />
+        <action
+            android:id="@+id/action_adminAnaEkran_to_userManagement"
+            app:destination="@id/userManagement" />
+        <action
+            android:id="@+id/action_adminAnaEkran_to_orderTracking"
+            app:destination="@id/orderTracking" />
+        <action
+            android:id="@+id/action_adminAnaEkran_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/ProductManagement"
+        android:name="com.fatihbilgin.palletmart.adminpanel.urunyonetim.ProductManagement"
+        android:label="fragment_product_management"
+        tools:layout="@layout/fragment_product_management" >
+        <action
+            android:id="@+id/action_ProductManagement_to_adminAnaEkran"
+            app:destination="@id/adminAnaEkran" />
+        <action
+            android:id="@+id/action_ProductManagement_to_addProductadmin"
+            app:destination="@id/addProductadmin" />
+        <action
+            android:id="@+id/action_ProductManagement_to_productDetailadmin"
+            app:destination="@id/productDetailadmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/userManagement"
+        android:name="com.fatihbilgin.palletmart.adminpanel.kullaniciyonetim.UserManagement"
+        android:label="fragment_user_management"
+        tools:layout="@layout/fragment_user_management" >
+        <action
+            android:id="@+id/action_userManagement_to_adminAnaEkran"
+            app:destination="@id/adminAnaEkran" />
+        <action
+            android:id="@+id/action_userManagement_to_addUseradmin"
+            app:destination="@id/addUseradmin" />
+        <action
+            android:id="@+id/action_userManagement_to_userDetail"
+            app:destination="@id/userDetail"
+           />
+    </fragment>
+    <fragment
+        android:id="@+id/orderTracking"
+        android:name="com.fatihbilgin.palletmart.adminpanel.siparisyonetim.OrderTracking"
+        android:label="fragment_order_tracking"
+        tools:layout="@layout/fragment_order_tracking" >
+        <action
+            android:id="@+id/action_orderTracking_to_adminAnaEkran"
+            app:destination="@id/adminAnaEkran" />
+        <argument
+            android:name="orderId"
+            app:argType="string"
+            app:nullable="false"/>
+        <action
+            android:id="@+id/action_orderTracking_to_orderDetail"
+            app:destination="@id/orderDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/adminProductEdit"
+        android:name="com.fatihbilgin.palletmart.adminpanel.urunyonetim.AdminProductEdit"
+        android:label="fragment_admin_product_edit"
+        tools:layout="@layout/fragment_admin_product_edit" >
+        <argument
+            android:name="product"
+            app:argType="com.fatihbilgin.palletmart.adminpanel.urunyonetim.Product" />
+        <action
+            android:id="@+id/action_adminProductEdit_to_productDetailadmin"
+            app:destination="@id/productDetailadmin" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciEkran"
+        android:name="com.fatihbilgin.palletmart.kulanicipanel.KullaniciEkran"
+        android:label="fragment_kullanici_ekran"
+        tools:layout="@layout/fragment_kullanici_ekran" >
+        <action
+            android:id="@+id/action_kullaniciEkran_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_kullaniciEkran_to_productDetail"
+            app:destination="@id/productDetail" />
+        <action
+            android:id="@+id/action_kullaniciEkran_to_cart"
+            app:destination="@id/cart" />
+        <action
+            android:id="@+id/action_kullaniciEkran_to_userInfo"
+            app:destination="@id/userInfo" />
+        <action
+            android:id="@+id/action_kullaniciEkran_to_saticiAnaEkran"
+            app:destination="@id/saticiAnaEkran" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetail"
+        android:name="com.fatihbilgin.palletmart.kulanicipanel.ProductDetail"
+        android:label="fragment_product_detail"
+        tools:layout="@layout/fragment_product_detail" >
+        <argument
+            android:name="product"
+            app:argType="com.fatihbilgin.palletmart.adminpanel.urunyonetim.Product"/>
+        <action
+            android:id="@+id/action_productDetail_to_cart"
+            app:destination="@id/cart" />
+        <action
+            android:id="@+id/action_productDetail_to_kullaniciEkran"
+            app:destination="@id/kullaniciEkran" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart"
+        android:name="com.fatihbilgin.palletmart.kulanicipanel.Cart"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cart_to_kullaniciEkran"
+            app:destination="@id/kullaniciEkran" />
+        <action
+            android:id="@+id/action_cart_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userInfo"
+        android:name="com.fatihbilgin.palletmart.kulanicipanel.UserInfo"
+        android:label="fragment_user_info"
+        tools:layout="@layout/fragment_user_info" >
+        <action
+            android:id="@+id/action_userInfo_to_kullaniciEkran"
+            app:destination="@id/kullaniciEkran" />
+        <action
+            android:id="@+id/action_userInfo_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/saticiAnaEkran"
+        android:name="com.fatihbilgin.palletmart.saticipanel.SaticiAnaEkran"
+        android:label="fragment_satici_ana_ekran"
+        tools:layout="@layout/fragment_satici_ana_ekran" >
+        <action
+            android:id="@+id/action_saticiAnaEkran_to_kullaniciEkran"
+            app:destination="@id/kullaniciEkran" />
+        <action
+            android:id="@+id/action_saticiAnaEkran_to_addProductSatici"
+            app:destination="@id/addProductSatici" />
+        <action
+            android:id="@+id/action_saticiAnaEkran_to_productDetailSatici"
+            app:destination="@id/productDetailSatici" />
+        <action
+            android:id="@+id/action_saticiAnaEkran_to_settingsSatici"
+            app:destination="@id/settingsSatici" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductSatici"
+        android:name="com.fatihbilgin.palletmart.saticipanel.AddProductSatici"
+        android:label="fragment_add_product_satici"
+        tools:layout="@layout/fragment_add_product_satici" >
+        <action
+            android:id="@+id/action_addProductSatici_to_saticiAnaEkran"
+            app:destination="@id/saticiAnaEkran" />
+    </fragment>
+    <fragment
+        android:id="@+id/addProductadmin"
+        android:name="com.fatihbilgin.palletmart.adminpanel.urunyonetim.AddProductadmin"
+        android:label="fragment_add_productadmin"
+        tools:layout="@layout/fragment_add_productadmin" >
+        <action
+            android:id="@+id/action_addProductadmin_to_productManagement"
+            app:destination="@id/ProductManagement" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUseradmin"
+        android:name="com.fatihbilgin.palletmart.adminpanel.kullaniciyonetim.addUseradmin"
+        android:label="fragment_add_useradmin"
+        tools:layout="@layout/fragment_add_useradmin" >
+        <action
+            android:id="@+id/action_addUseradmin_to_userManagement"
+            app:destination="@id/userManagement" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetail"
+        android:name="com.fatihbilgin.palletmart.adminpanel.kullaniciyonetim.UserDetail"
+        android:label="fragment_user_detail"
+        tools:layout="@layout/fragment_user_detail" >
+        <action
+            android:id="@+id/action_userDetail_to_userManagement"
+            app:destination="@id/userManagement" />
+        <action
+            android:id="@+id/action_userDetail_to_userUpdate"
+            app:destination="@id/userUpdate" />
+    </fragment>
+    <fragment
+        android:id="@+id/userUpdate"
+        android:name="com.fatihbilgin.palletmart.adminpanel.kullaniciyonetim.UserUpdate"
+        android:label="fragment_user_update"
+        tools:layout="@layout/fragment_user_update" >
+        <action
+            android:id="@+id/action_userUpdate_to_userDetail"
+            app:destination="@id/userDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailadmin"
+        android:name="com.fatihbilgin.palletmart.adminpanel.urunyonetim.ProductDetailadmin"
+        android:label="fragment_product_detailadmin"
+        tools:layout="@layout/fragment_product_detailadmin" >
+        <argument
+            android:name="product"
+            app:argType="com.fatihbilgin.palletmart.adminpanel.urunyonetim.Product" />
+        <action
+            android:id="@+id/action_ProductDetailadmin_to_ProductManagement"
+            app:destination="@id/ProductManagement" />
+        <action
+            android:id="@+id/actionProductDetailadminToAdminProductEdit"
+            app:destination="@id/adminProductEdit">
+            <argument
+                android:name="product"
+                app:argType="com.fatihbilgin.palletmart.adminpanel.urunyonetim.Product" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetail"
+        android:name="com.fatihbilgin.palletmart.adminpanel.siparisyonetim.OrderDetail"
+        android:label="fragment_order_detail"
+        tools:layout="@layout/fragment_order_detail" >
+            <argument
+                android:name="orderId"
+                app:argType="string"
+                app:nullable="false"/>
+        <action
+            android:id="@+id/action_orderDetail_to_orderTracking"
+            app:destination="@id/orderTracking" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.fatihbilgin.palletmart.adminpanel.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settings_to_adminAnaEkran"
+            app:destination="@id/adminAnaEkran" />
+        <action
+            android:id="@+id/action_settings_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailSatici"
+        android:name="com.fatihbilgin.palletmart.saticipanel.ProductDetailSatici"
+        android:label="fragment_product_detail_satici"
+        tools:layout="@layout/fragment_product_detail_satici" >
+        <argument
+            android:name="product"
+            app:argType="com.fatihbilgin.palletmart.adminpanel.urunyonetim.Product"/>
+        <action
+            android:id="@+id/action_productDetailSatici_to_saticiAnaEkran"
+            app:destination="@id/saticiAnaEkran" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsSatici"
+        android:name="com.fatihbilgin.palletmart.saticipanel.SettingsSatici"
+        android:label="fragment_settings_satici"
+        tools:layout="@layout/fragment_settings_satici" >
+        <action
+            android:id="@+id/action_settingsSatici_to_saticiAnaEkran"
+            app:destination="@id/saticiAnaEkran" />
+        <action
+            android:id="@+id/action_settingsSatici_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.fatihbilgin.palletmart.kulanicipanel.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_cart"
+            app:destination="@id/cart" />
+    </fragment>
+</navigation>
