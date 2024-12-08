@@ -43,7 +43,7 @@ Yönetici, uygulamada tüm kullanıcıları ve ürünleri görüntüleyebilir, d
 Deneysel Sonuçlar
 
 Uygulama, geliştirilen tüm ekranlarda detaylı bir şekilde test edilmiştir. Firebase Realtime Database ile yapılan işlemler hatasız bir şekilde çalışmaktadır. Çeşitli kullanıcı rolleri (alıcı, satıcı ve admin) tanımlanarak sistemin çoklu senaryolarda performansı doğrulanmıştır.
-Kullanıcı deneyimi açısından, uygulamanın tasarımı açık ve anlaşılır bir şekilde oluşturulmuştur. Kullanıcıların kolayca adapte olabileceği bir ara yüz sunulmuştur.
+Kullanıcı deneyimi açısından, uygulamanın tasarımı açık ve anlaşılır bir şekilde oluşturulmuştur. Kullanıcıların kolayca adapte olabileceği bir arayüz sunulmuştur.
 Proje kapsamında belirlediğim hedeflerin büyük bir kısmını gerçekleştirmiş olsam da, admin/satıcı panellerine daha fazla işlevsellik kazandırmak gibi geliştirmeler ileride yapılacaklar arasında yer almaktadır.
 ________________________________________
 Sonuç
