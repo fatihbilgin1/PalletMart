@@ -1,68 +1,53 @@
 # PalletMart
 
- PALLETMART                 
+ PALLETMART
+Summary
+This project aims to bring buyers and sellers together on a single platform to make pallet trading faster, more practical, and efficient in the digital environment. A mobile application has been designed to enable users to communicate and access products effortlessly. With its user-friendly interface, the app intends to simplify business processes and provide a modern solution to sectoral needs.
 
+Introduction
+In today’s world, digitalization has permeated every aspect of business processes. People now prefer conducting various transactions through online platforms. PalletMart offers a solution for pallet trade by enabling buyers and sellers to access products, place orders, and communicate without the need for physical meetings.
+The target audience of this project includes factories, businesses, and individual users involved in pallet trading. The primary goal is to meet their needs in the fastest and easiest way possible.
 
-Özet
+Methodology
+Technological Infrastructure:
+PalletMart is developed using the Kotlin programming language and utilizes Firebase Realtime Database to ensure secure and fast data storage.
 
-Bu proje, alıcı ve satıcıları ortak bir platformda bir araya getirerek, palet alışverişini dijital ortamda daha hızlı, pratik ve etkili bir şekilde gerçekleştirmelerini sağlamak amacıyla geliştirilmiştir. Kullanıcıların hem iletişim kurabileceği hem de ürünlere kolayca erişim sağlayabileceği bir mobil uygulama tasarlanmıştır. Uygulama, kullanıcı dostu bir ara yüz sunarak, iş süreçlerini kolaylaştırmayı ve sektörel ihtiyaçlara modern bir çözüm sunmayı hedeflemektedir.
+Data Structure:
+The database comprises the following nodes:
 
-Giriş
+Users Node: Stores user information.
+Products Node: Contains details of products listed for sale.
+Orders Node: Manages order information.
+Cart Node: Tracks users' cart activities.
+Application Flow:
+The operational flow of the application can be summarized as follows:
 
-Günümüz dünyasında, dijitalleşme iş süreçlerinin her alanına nüfuz etmiştir. İnsanlar artık pek çok işlemi çevrim içi platformlar üzerinden gerçekleştirmeyi tercih etmektedir. PalletMart, palet ticareti yapan alıcı ve satıcıların, fiziksel bir buluşma ihtiyacı olmadan ürünlere erişmesini, sipariş vermesini ve iletişim kurmasını sağlayan bir çözüm sunmaktadır.
-Bu projenin hedef kitlesi, palet alımı ve satımı yapan fabrikalar, işletmeler ve bireysel kullanıcıları içermektedir. Temel amaç, bu kişilerin ihtiyaçlarını en hızlı ve kolay şekilde karşılamaktır.
+User Login:
+When the application launches, users without an account are directed to the "Sign Up" screen. After completing the registration process, they can log in as users.
 
+Buyer Operations:
+On the home screen, users are presented with a product list. They can review product details, add items to their cart, and place orders.
 
-Yöntem
+Seller Operations:
+Users can switch to a seller role using the "Become a Seller" button. As a seller, they can add, update, and delete products.
 
-Teknolojik Altyapı:
-PalletMart, Kotlin programlama dili kullanılarak geliştirilmiş, verilerin güvenli ve hızlı bir şekilde saklanmasını sağlamak için Firebase Realtime Database teknolojisinden faydalanılmıştır.
-Veri Yapısı:
-Veritabanında kullanılan düğümler:
+Admin Panel:
+Administrators can view, edit, or delete all users and products in the application. They can also add new users, approve orders to initiate the shipping process, and manage their own information.
 
-•	Users Düğümü: Kullanıcı bilgilerini saklar.
+Experimental Results
+The application has been thoroughly tested across all developed screens. Transactions performed using Firebase Realtime Database are functioning error-free. The system’s performance has been validated under various user roles (buyer, seller, and admin).
+From a user experience perspective, the application’s design is clear and straightforward, ensuring easy adaptation.
+While most of the project goals have been achieved, enhancing the functionality of admin/seller panels is among the planned improvements for the future.
 
-•	Products Düğümü: Satışa sunulan ürünlerin detaylarını içerir.
+Conclusion
+The PalletMart project successfully addresses a sectoral need by digitizing the pallet trading process. With its user-friendly structure and efficient functionality, it has largely met its objectives. Future plans include adding more features to the application to enhance its utility.
 
-•	Orders Düğümü: Sipariş bilgilerini yönetir.
+References
+Google Firebase Realtime Database: https://firebase.google.com/products/realtime-database
+Official Kotlin Documentation: https://kotlinlang.org/docs/home.html
+Android Developers: Application Development https://developer.android.com/
 
-•	Cart Düğümü: Kullanıcıların sepet işlemlerini takip eder.
-
-
-Uygulama Akışı:
-
-Akış şeması incelendiğinde, uygulamanın işleyişi şu şekilde özetlenebilir:
-1.	Kullanıcı Girişi:
-Uygulama çalıştırıldığında, kullanıcı mevcut bir hesabı yoksa "Kayıt Ol" ekranına yönlendirilir. Kayıt işlemi tamamlandıktan sonra kullanıcı olarak giriş yapılır.
-2.	Alıcı İşlemleri:
-Kullanıcı, ana ekranda ürün listesi ile karşılanır. İlgilendiği ürünlerin detaylarını inceleyebilir, sepetine ekleyebilir ve sipariş verebilir.
-3.	Satıcı İşlemleri:
-Kullanıcı "Satıcı Ol" butonunu kullanarak satıcı rolüne geçebilir. Satıcı olarak ürün ekleme, güncelleme ve silme işlemleri gerçekleştirebilir.
-4.	Admin Paneli:
-Yönetici, uygulamada tüm kullanıcıları ve ürünleri görüntüleyebilir, düzenleyebilir veya silebilir. Ayrıca yeni kullanıcılar ekleyebilir, siparişleri onaylayarak kargo sürecini başlatabilir ve kendi bilgilerini yönetebilir.
-
-
-
-                                                                                                                                      
-
-Deneysel Sonuçlar
-
-Uygulama, geliştirilen tüm ekranlarda detaylı bir şekilde test edilmiştir. Firebase Realtime Database ile yapılan işlemler hatasız bir şekilde çalışmaktadır. Çeşitli kullanıcı rolleri (alıcı, satıcı ve admin) tanımlanarak sistemin çoklu senaryolarda performansı doğrulanmıştır.
-Kullanıcı deneyimi açısından, uygulamanın tasarımı açık ve anlaşılır bir şekilde oluşturulmuştur. Kullanıcıların kolayca adapte olabileceği bir arayüz sunulmuştur.
-Proje kapsamında belirlediğim hedeflerin büyük bir kısmını gerçekleştirmiş olsam da, admin/satıcı panellerine daha fazla işlevsellik kazandırmak gibi geliştirmeler ileride yapılacaklar arasında yer almaktadır.
-________________________________________
-Sonuç
-
-PalletMart projesi, palet alım-satım sürecini dijitalleştirerek sektörel bir ihtiyaca yanıt vermeyi başarmıştır. Kullanıcı dostu yapısı ve etkili işlevselliği ile hedeflere büyük oranda ulaşılmıştır. Gelecekte, uygulamanın daha fazla özelliğe sahip hale getirilmesi için planlamalar yapılmıştır.
-________________________________________
-Kaynakça
-
-•	Google Firebase Realtime Database https://firebase.google.com/products/realtime-database
-•	Kotlin Resmi Dokümantasyonu https://kotlinlang.org/docs/home.html
-•	Android Developers: Uygulama Geliştirme https://developer.android.com/
-
-________________________________________
-UYGULAMA AKIŞ ŞEMASI VE GÖRSELLER
+APPLICATION FLOWCHART AND VISUALS
 
 ________________________________________
 ![PalletMart Akış Diyagramı](https://github.com/user-attachments/assets/309671ac-0ad1-4b12-8eb2-769cefffaa37)
