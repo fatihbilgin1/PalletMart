@@ -1,19 +1,25 @@
 # PalletMart
 
  PALLETMART
+ 
 Summary
+
 This project aims to bring buyers and sellers together on a single platform to make pallet trading faster, more practical, and efficient in the digital environment. A mobile application has been designed to enable users to communicate and access products effortlessly. With its user-friendly interface, the app intends to simplify business processes and provide a modern solution to sectoral needs.
 
 Introduction
+
 In today’s world, digitalization has permeated every aspect of business processes. People now prefer conducting various transactions through online platforms. PalletMart offers a solution for pallet trade by enabling buyers and sellers to access products, place orders, and communicate without the need for physical meetings.
 The target audience of this project includes factories, businesses, and individual users involved in pallet trading. The primary goal is to meet their needs in the fastest and easiest way possible.
 
 Methodology
+
 Technological Infrastructure:
 PalletMart is developed using the Kotlin programming language and utilizes Firebase Realtime Database to ensure secure and fast data storage.
 
 Data Structure:
+
 The database comprises the following nodes:
+
 
 Users Node: Stores user information.
 Products Node: Contains details of products listed for sale.
@@ -22,30 +28,39 @@ Cart Node: Tracks users' cart activities.
 Application Flow:
 The operational flow of the application can be summarized as follows:
 
+
 User Login:
 When the application launches, users without an account are directed to the "Sign Up" screen. After completing the registration process, they can log in as users.
+
 
 Buyer Operations:
 On the home screen, users are presented with a product list. They can review product details, add items to their cart, and place orders.
 
+
 Seller Operations:
 Users can switch to a seller role using the "Become a Seller" button. As a seller, they can add, update, and delete products.
 
+
 Admin Panel:
 Administrators can view, edit, or delete all users and products in the application. They can also add new users, approve orders to initiate the shipping process, and manage their own information.
+
 
 Experimental Results
 The application has been thoroughly tested across all developed screens. Transactions performed using Firebase Realtime Database are functioning error-free. The system’s performance has been validated under various user roles (buyer, seller, and admin).
 From a user experience perspective, the application’s design is clear and straightforward, ensuring easy adaptation.
 While most of the project goals have been achieved, enhancing the functionality of admin/seller panels is among the planned improvements for the future.
 
+
 Conclusion
 The PalletMart project successfully addresses a sectoral need by digitizing the pallet trading process. With its user-friendly structure and efficient functionality, it has largely met its objectives. Future plans include adding more features to the application to enhance its utility.
+
 
 References
 Google Firebase Realtime Database: https://firebase.google.com/products/realtime-database
 Official Kotlin Documentation: https://kotlinlang.org/docs/home.html
 Android Developers: Application Development https://developer.android.com/
+
+
 
 APPLICATION FLOWCHART AND VISUALS
 
